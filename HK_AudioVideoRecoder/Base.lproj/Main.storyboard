@@ -17,13 +17,44 @@
                     <view key="view" contentMode="scaleToFill" id="Qfd-oN-9XK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5M-9K-tXP">
+                                <rect key="frame" x="109" y="281" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90349897459999995" green="0.65671067090000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="btnDown:" destination="a9I-Wv-EtS" eventType="touchDown" id="nc8-3f-GWg"/>
+                                    <action selector="btnDragUp:" destination="a9I-Wv-EtS" eventType="touchDragExit" id="ajP-vF-e0E"/>
+                                    <action selector="btnUp:" destination="a9I-Wv-EtS" eventType="touchUpInside" id="U69-GU-lrf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rt-yx-Vda">
+                                <rect key="frame" x="236" y="281" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="播放"/>
+                                <connections>
+                                    <action selector="playRecordSound:" destination="a9I-Wv-EtS" eventType="touchUpInside" id="BnQ-ir-sW1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eyH-up-jKh">
+                                <rect key="frame" x="162" y="180" width="50" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36139000519999998" green="0.84412606040000004" blue="0.30318440320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.82956826289999996" blue="0.17447153530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4iW-fx-O1H"/>
                     </view>
+                    <connections>
+                        <outlet property="btn" destination="o5M-9K-tXP" id="3vw-pI-l4e"/>
+                        <outlet property="imageView" destination="eyH-up-jKh" id="zhH-mS-Yz7"/>
+                        <outlet property="playBtn" destination="2Rt-yx-Vda" id="wmH-8h-Ix8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBE-ZO-zrM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="158" y="-370"/>
+            <point key="canvasLocation" x="-527.20000000000005" y="-455.62218890554726"/>
         </scene>
     </scenes>
 </document>
